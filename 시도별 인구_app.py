@@ -47,6 +47,3 @@ with tab2:
         title="시도별 인구 10위"
     )
     st.plotly_chart(fig_bar, use_container_width=True)
-
-
-     st.markdown("📌 선형 추세선을 통해 변수 간 관계를 시각적으로 파악할 수 있습니다.")
