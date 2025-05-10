@@ -6,7 +6,7 @@ import json
 # 데이터 로드 함수
 @st.cache_data
 def load_data():
-    df = pd.read_csv("시_도별 인구.csv")  # CSV 파일로 수정
+    df = pd.read_csv("시_도별 인구.csv")  # CSV 파일 사용
     df.columns = [col.strip().replace(' ', '_') for col in df.columns]
     df = df.rename(columns={'지역명': 'Region', '인구수': 'Population'})
     return df
@@ -58,5 +58,3 @@ with tab2:
         title="시도별 인구 10위"
     )
     st.plotly_chart(fig_bar, use_container_width=True)
-
-  
