@@ -13,7 +13,7 @@ def load_data():
 
 @st.cache_data
 def load_geojson():
-    with open("skorea_provinces_geo.json", encoding="utf-8") as f:
+    with open("skorea-provinces-geo.json", encoding="utf-8") as f:
         geojson = json.load(f)
     return geojson
 
@@ -31,7 +31,7 @@ with tab1:
         df,
         geojson=geojson,
         locations='Region',
-        featureidkey="properties.name",  # GeoJSON 속성 이름 맞춰야 함
+        featureidkey="properties.name",
         color="Population",
         color_continuous_scale="YlGnBu",
         hover_name="Region",
