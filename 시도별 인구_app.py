@@ -6,7 +6,7 @@ import json
 # 데이터 로드
 @st.cache_data
 def load_data():
-    df = pd.read_csv("시_도별 인구.csv")
+    df = pd.read_csv("skorea-provinces-geo.json")
     df.columns = [col.strip().replace(' ', '_') for col in df.columns]
     df = df.rename(columns={'지역명': 'Region', '인구수': 'Population'})
     return df
