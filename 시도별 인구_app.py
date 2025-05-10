@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import geopandas as gpd
 import plotly.express as px
 import json
 
@@ -59,3 +58,5 @@ with tab2:
         title="시도별 인구 10위"
     )
     st.plotly_chart(fig_bar, use_container_width=True)
+
+  
